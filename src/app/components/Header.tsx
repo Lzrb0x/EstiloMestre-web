@@ -1,4 +1,5 @@
 import { SheetComponent } from "@/components/SheetComponent";
+import Link from "next/link";
 
 
 export const Header = () => {
@@ -18,9 +19,9 @@ export const Header = () => {
             <div className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
                     <div className="text-2xl md:text-3xl font-bold text-slate-800">
-                        <a href="/">
+                        <Link href="/">
                             Estilo <span className="text-primary">Mestre</span>
-                        </a>
+                        </Link>
                     </div>
                     <nav className="hidden md:flex items-center gap-6">
                         {navItems.map((item) => (
