@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Search, MapPin, Clock, Calendar, Scissors, Smartphone, Zap, Menu, X, ChevronRight, Star } from 'lucide-react';
+import { Search, MapPin, Clock, Calendar, Scissors, Smartphone, Zap, Menu, X, ChevronRight } from 'lucide-react';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [searchLocation, setSearchLocation] = useState('');
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
