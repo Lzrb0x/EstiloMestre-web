@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { User, Mail, Lock, Phone, CheckCircle, XCircle, Loader, ArrowLeft } from 'lucide-react';
+import { User, Mail, Lock, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Header } from './Header';
 
@@ -13,36 +13,6 @@ export default function RegisterForm() {
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
 
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-    const [showErrorMessage, setShowErrorMessage] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
-
-    const handleSubmit = (event: { preventDefault: () => void; }) => {
-        event.preventDefault(); // Previne o recarregamento da página
-
-        setShowSuccessMessage(false);
-        setShowErrorMessage(false);
-        setErrorMessage('');
-
-        if (!name || !email || !password || !phone) {
-            setErrorMessage('Por favor, preencha todos os campos.');
-            setShowErrorMessage(true);
-            return;
-        }
-
-
-        setShowSuccessMessage(true);
-
-        setName('');
-        setEmail('');
-        setPassword('');
-        setPhone('');
-    };
-
-    const closeMessages = () => {
-        setShowSuccessMessage(false);
-        setShowErrorMessage(false);
-    };
 
 
     return (
@@ -56,7 +26,7 @@ export default function RegisterForm() {
                     </h2>
 
                     {/* Form com grid apenas em desktop */}
-                    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-6">
+                    <form className="space-y-4 sm:space-y-4 lg:grid lg:grid-cols-2 lg:gap-x-6 lg:space-y-6">
                         {/* Campo Nome */}
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
