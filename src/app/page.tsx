@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import BarbershopShortCard from './components/BarbershopShortCard';
 import { Button } from '@/components/ui/button';
 import { Footer } from './components/Footer';
-import useFetchShortBarbershops from './actions/useFetchBarbershops';
+import useFetchShortBarbershops from '../actions/useFetchBarbershops';
 
 
 export default function HomePage() {
@@ -15,9 +15,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100">
 
-      
       <Header />
-
 
       <section className="relative overflow-hidden py-12 md:py-20">
         <div className="container mx-auto px-4">

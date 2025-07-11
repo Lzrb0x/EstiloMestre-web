@@ -34,7 +34,7 @@ export const Header = () => {
                             </a>
                         ))}
                         {ctaItem.map((item, index) => (
-                            <a
+                            <Link
                                 key={item.label}
                                 href={item.href}
                                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${index === 0
@@ -43,7 +43,7 @@ export const Header = () => {
                                     }`}
                             >
                                 {item.label}
-                            </a>
+                            </Link>
                         ))}
                     </nav>
 
